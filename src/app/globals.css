@@ -1,0 +1,34 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* 5K brand: near-black navigation, white surfaces, hot magenta accent. */
+@theme {
+  --color-magenta: #ff2d84;
+  --color-ember: #ff7a3d;
+
+  --color-chrome: #0b0b0e;
+  --color-chrome-raised: #15151a;
+  --color-chrome-line: #23232b;
+  --color-chrome-text: #ececf1;
+  --color-chrome-muted: #8b8b97;
+
+  --color-canvas: #f5f5f7;
+  --color-surface: #ffffff;
+  --color-line: #e6e6eb;
+  --color-ink: #111116;
+  --color-ink-muted: #6a6a75;
+}
+
+body {
+  background: var(--color-canvas);
+  color: var(--color-ink);
+}
+
+::selection {
+  background: color-mix(in srgb, var(--color-magenta) 25%, transparent);
+}
